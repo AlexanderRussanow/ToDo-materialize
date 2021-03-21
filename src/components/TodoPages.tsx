@@ -21,7 +21,7 @@ export const TodoPage: React.FC = () => {
     const newTodo: ITodo = {
       title: title,
       id: Date.now(),
-      complited: false,
+      completed: false,
     };
     setTodos((prev) => [newTodo, ...prev]);
   };
@@ -30,7 +30,7 @@ export const TodoPage: React.FC = () => {
     setTodos((prev) =>
       prev.map((todo) => {
         if (todo.id === id) {
-          todo.complited = !todo.complited;
+          todo.completed = !todo.completed;
         }
         return todo;
       })

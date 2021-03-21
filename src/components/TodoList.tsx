@@ -24,13 +24,13 @@ const removeHandler = (event: React.MouseEvent, id: number) => {
     <ul>
       {todos.map(todo => {
         const classes = ["todo"];
-        if (todo.complited) {
-          classes.push("complited");
+        if (todo.completed) {
+          classes.push("completed");
         }
         return (
           <li className={classes.join(" ")} key={todo.id}>
             <label>
-              <input type="checkbox" checked={todo.complited} onChange={onToggle.bind(null, todo.id)}/>
+              <input type="checkbox" checked={todo.completed} onChange={onToggle.bind(null, todo.id)}/>
               <span>{todo.title}</span>
               <i
                 className="material-icons red-text"
